@@ -1,10 +1,9 @@
 'use client'
-import dynamic from 'next/dynamic';
+import Spline from '@splinetool/react-spline';
 import { useRouter } from 'next/navigation';
 
 export default function HomeComponent() {
   const router = useRouter()
-const Spline = dynamic(() => import('@splinetool/react-spline'), )
   return (
     <div>
       <Spline

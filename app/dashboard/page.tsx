@@ -1,9 +1,8 @@
-import dynamic from 'next/dynamic';
+import Spline from '@splinetool/react-spline';
 import React from 'react';
 
 export default function Dashboard() {
   
-const Spline = dynamic(() => import('@splinetool/react-spline') )
   return (
     <div>
       <Spline
