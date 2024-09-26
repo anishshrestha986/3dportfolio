@@ -2,7 +2,8 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import React, { useState } from 'react';
-import {     FaArrowAltCircleLeft, FaArrowAltCircleRight,     FaFileCode,   FaPaperclip,  FaPhoneAlt } from 'react-icons/fa';
+import { BiSolidMessageAltDetail } from 'react-icons/bi';
+import {     FaArrowAltCircleLeft, FaArrowAltCircleRight,     FaFileCode,      FaPaperclip } from 'react-icons/fa';
 import {  FaHouseChimney } from 'react-icons/fa6';
 
 const Sidebar = () => {
@@ -22,7 +23,7 @@ const Sidebar = () => {
             }}
             className={`flex [&>*]:my-auto text-md p-3 `}
         >
-            <div className="text-[1.9rem] flex [&>*]:mx-auto ">
+            <div className="text-2xl flex [&>*]:mx-auto ">
                 {icon}
             </div>
             <div>{name && name}</div>
@@ -41,8 +42,8 @@ const Sidebar = () => {
         <ul className="p-4 space-y-10 ">
           <MenuItem icon={<FaHouseChimney color={router === '/' || '/dashboard'? '1b73d3':'98DBFF'}/>} route="/dashboard" />
           <MenuItem icon={<FaFileCode color={router === '/projects' ? '1b73d3':'98DBFF'}/>} route="/projects" />
-          <MenuItem icon={<FaPaperclip color={router === '/resume' ? '1b73d3':'98DBFF'}/>} route="/resume" />
-          <MenuItem icon={<FaPhoneAlt color={router === '/contact' ? '1b73d3':'98DBFF'}/>} route="/contact" />
+          <MenuItem icon={<FaPaperclip color={router === '/skills' ? '1b73d3':'98DBFF'}/>} route="/resume" />
+          <MenuItem icon={<BiSolidMessageAltDetail color={router === '/contact' ? '1b73d3':'98DBFF'}/>} route="/contact" />
 
         </ul>
       </div>
@@ -50,7 +51,7 @@ const Sidebar = () => {
       {/* Toggle Button */}
       <button
         onClick={toggleSidebar}
-        className={`fixed top-[46vh] left-[5.5rem] rounded-full text-[1.5rem] bg-white ${isOpen? 'translate-x-0': '-translate-x-10' } hover:bg-[#1b73d3] text- transition-transform transform`}
+        className={`fixed top-[46vh] left-[82px] rounded-full text-2xl bg-white ${isOpen? 'translate-x-0': '-translate-x-10' } hover:bg-[#1b73d3] text- transition-transform transform`}
       >
         {isOpen? <FaArrowAltCircleLeft color='98DBFF'/> :<FaArrowAltCircleRight color='98DBFF'/>}
       </button>
